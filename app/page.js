@@ -2,6 +2,7 @@
 import Link from "next/link";
 import {useState, useEffect} from "react";
 import { FiPlus } from "react-icons/fi";
+import Menu from "./components/Menu";
 
 
 export default function Home() {
@@ -9,14 +10,14 @@ export default function Home() {
   const [funcionarios, setFuncionarios] = useState([])
 
   useEffect(()=> {
-    fetch("http://129.148.27.50/api/funcionario")
+    fetch("https://129.148.27.50/api/funcionario")
     .then(res => res.json())
     .then(data => setFuncionarios(data))
 
     console.log(funcionarios)
   }, [])
   return (
-    <main className="p-4">
+    <main className="p-8 relative">
       <nav className="flex items-center justify-between">
         <h1 className="font-extrabold text-5xl">Funcionários</h1>
         <FiPlus size="32px" />
