@@ -12,8 +12,8 @@ export default function Login() {
         fetch("https://api-cadastro-clientes.onrender.com/login", {
             method: "POST",
             body: JSON.stringify({
-                email: e,
-                senha: s
+                email: email,
+                senha: senha
             }),
             headers: {
                 "Content-type": "application/json; charset=UTF-8"
