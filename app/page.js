@@ -19,7 +19,9 @@ export default function Home() {
     <main className="p-4">
       <nav className="flex items-center justify-between">
         <h1 className="font-extrabold text-5xl">Funcionários</h1>
-        <FiPlus size="32px" />
+       <Link href={'/login'}>
+        <FiPlus size="32px" /> 
+      </Link>
       </nav>
       <div className="mt-4">
         {funcionarios.map(item => {

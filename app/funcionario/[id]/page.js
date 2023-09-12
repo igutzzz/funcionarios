@@ -5,9 +5,11 @@ import { useEffect, useState } from "react"
 export default function Funcionario({params}) {
     const [funcionario, setFuncionario] = useState({})
     useEffect(() => {
-        fetch(`http://129.148.27.50/api/funcionario/${params.id}`)
-        .then(res => res.json())
-        .then(res => setFuncionario(res))
+        async function getData(){
+            await fetch(`http://129.148.27.50/api/funcionario/${params.id}`)
+            .then(res => res.json())
+            .then(res => setFuncionario(res))
+        }
     }, [])
     return (
         <div>
