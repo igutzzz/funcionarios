@@ -8,9 +8,7 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Login() {
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
-
-    function doLogin(e, s) {
-        console.log(email, senha)
+    function doLogin() {
         fetch("https://api-cadastro-clientes.onrender.com/login", {
             method: "POST",
             body: JSON.stringify({
@@ -24,6 +22,7 @@ export default function Login() {
         .then((response) => response.json())
         .then((data)=> console.log(data))
     }
+      
 
     const handleEmail = e =>{
         setEmail(e.target.value)
@@ -49,7 +48,7 @@ export default function Login() {
                         <input type="password" value={senha} onChange={handleSenha} name="password" id="password" className="px-4 py-3 bg-slate-300 rounded-md mb-8 mt-2 w-full" />
                     </div>
                     <a href="#" className="font-semibold underline text-purple-600 mb-2 ">Esqueci minha senha</a> <br />
-                    <button onClick={doLogin(email, senha)} className={inter.className+" mt-12 bg-purple-600 w-full rounded-md text-center py-3 text-slate-50 transition-all ease-in-out hover:cursor-pointer hover:bg-purple-500"}>Acessar</button>
+                    <button onClick={doLogin} className={inter.className+" mt-12 bg-purple-600 w-full rounded-md text-center py-3 text-slate-50 transition-all ease-in-out hover:cursor-pointer hover:bg-purple-500"}>Acessar</button>
                 </div>
             </div>
         </main>
