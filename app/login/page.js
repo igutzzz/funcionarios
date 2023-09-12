@@ -37,7 +37,7 @@ export default function Login() {
             <div className="p-12 shadow-lg border-2 rounded-lg bg-slate-100 mx-4">
                 <div>
                     <h1 className="font-bold text-3xl mb-2">Login</h1>
-                    <h2 className="font-regular text-xl">Faça seu login e aproveite as melhores ofertas!</h2>
+                    <h2 className="font-regular text-xl mt-3">Faça seu login e aproveite as melhores ofertas!</h2>
                 </div>
                 <div className="mt-12">
                     <div>
