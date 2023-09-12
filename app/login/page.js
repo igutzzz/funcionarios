@@ -19,14 +19,13 @@ export default function Login() {
                 "Content-type": "application/json; charset=UTF-8"
             }
         })
-        .then((response) => response.json())
-        .then((data)=> console.log(data))
+        .then(response => response.json())
+        .then(data=> console.log(data))
     }
       
 
     const handleEmail = e =>{
         setEmail(e.target.value)
-        console.log(email)
     }
 
     const handleSenha = e => {
